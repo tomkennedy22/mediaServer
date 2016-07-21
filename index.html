@@ -1,0 +1,38 @@
+<!doctype html>
+<head>
+
+	<title>TK's Media Server</title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" >
+	<link rel="shortcut icon" href="img/PQ.png" >
+</head>
+
+<html>
+	<body>
+		<div class="big-header-container">
+		<div id="content" >
+			<img id="logo" src="img/logo.png">
+			<span class="main-text">Enter ingredients from from your pantry to discover a world of possible recipes.</br> Log in to save your favorite recipes for the future!</span>
+			</br>
+			<div id="insert">
+				<input type="textbox" id="textIngredient" placeholder="Type Ingredient Here!">
+				<!--<button type="button" id="addIngredient">Add</button>-->
+				<i id="search" class="fa fa-arrow-circle-right fa-3x"></i>
+				<ul id="ingredientList"></ul>
+			</div>
+
+			<div id="displayRecipes" style="display:none;">
+				<div id="scrollContent">
+
+				</div>
+			</div>
+		</div>
+		</div>
+
+	</body>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/dw_con_scroller.js" type="text/javascript"></script>
+  	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+</html>
