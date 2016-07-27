@@ -23,6 +23,7 @@ var globalData = {};
 
 console.log('before getJSON');
 $.getJSON( "web/info.json", function( data ) {
+	console.log('in getJSON');
   console.log(data);
   globalData = data;
   });
