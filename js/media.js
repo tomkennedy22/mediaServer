@@ -21,6 +21,7 @@ function saveData(){
 
 var globalData = {};
 
+console.log('before getJSON');
 $.getJSON( "web/info.json", function( data ) {
   console.log(data);
   globalData = data;
