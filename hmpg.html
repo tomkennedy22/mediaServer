@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" href="img/icon.png">
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <title>HMPG</title>
+    <!--<link href="css/style.css" rel="stylesheet">-->
+
+</head>
+
+<body class="page">
+<nav class="navbar navbar-default navnav" id="navID">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" id="topLeftName">
+        
+      </a>
+    </div>
+    <div>
+
+    </div>
+    <div class="navbar-right">
+      <a href="index.html" class="navbar-brand" id="logoutButton">Logout</a>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container"> 
+  <div class="row">
+    <hr>
+    <section id="pinBoot">
+
+      <article class="white-panel alerts">
+        <h3>Alerts</h3>
+        <div class="moduleData" id="alertsList">
+           <div  class="alertBox hide" id="alertClone">
+              <div class="text"></div>
+              <div class="time"></div>
+              <div class="from"></div>
+              <div class="complete">Complete<i class="glyphicon glyphicon-check btn-lg"></i></div>
+           </div>
+        </div>
+      </article>
+
+      <article class="white-panel">
+        <h3>Calendar</h3>
+        <div class="moduleData">
+          <iframe id="calendar" style="border: 0" width="500" height="400" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </article>
+
+      <article class="white-panel weatherModule"> 
+        <h3>Weather in </h3>
+        <div class="moduleData">
+          <div id="city"></div>
+          <div id="temp"></div>
+          <div id="humidity"></div>
+          <span id="weatherIcon"></span>
+        </div>
+      </article>
+
+      <article class="white-panel houseModule"> 
+        <h3>Your House</h3>
+        <div class="moduleData row">
+          <h4 class="houseTitle"></h4>
+          <div id="roommateList">
+            <div class="roommateLi hide" id="roommateClone">
+              <div class="roommateName"></div>
+              <div class="roommateEmail"></div>
+              <div class="isLandlord hide"></div>
+              <input class="alertText hide roomHidden form-control" type="text" placeholder="Alert text"/>
+              <button class="alertSendButton btn hide roomHidden">Send Alert</button>
+              <button class="removeFromHouse btn hide roomHidden">Remove from house</button>
+            </div>
+          </div>
+          <div class="addTenant houseOption">
+            <i class="glyphicon glyphicon-plus">Add New Tenant</i>
+            <h4 class="property hide"></h4>
+            <input type="text" id="newTenantEmail" placeholder="Email of new Tenant" class="hide form-control" />
+            <button id="searchForTenant" class="btn hide">Add Tenant</button>
+          </div>
+          <div class="leaveHouse houseOption">
+            
+            <i class="glyphicon glyphicon-remove">Move out of house</i>
+          </div>
+          <div class="newHouse hide houseOption">
+            
+            <i class="glyphicon glyphicon-plus">Create new house</i>
+          </div>
+        </div>
+      </article>
+
+      <article class="white-panel tenant"> 
+        <h3>Submit Maintainence Request</h3>
+        <div class="moduleData submitTicket">
+          <input type="text" placeholder="Name of Ticket" id="ticketTitle" class="form-control"/>
+          <textarea id="ticketDesc" cols="50" rows="10" class="form-control" placeholder="Description of Ticket"></textarea>
+          <button id="ticketSubmit" class="btn">Submit Ticket</button>
+        </div>
+      </article>
+
+      <article class="white-panel landlord"> 
+        <h3>Pending Maintainence Requests</h3>
+        <div class="moduleData reviewTicket hide" id="ticketClone">
+          <h5 class="ticketTitle"></h5>
+          <p class="ticketDescription"></p>
+          <button class="completeTicket btn">Complete Ticket</button>
+        </div>
+      </article>
+    </section>
+    <hr>
+  </div>
+
+  <article class="white-panel clone" id="cloneArticleSport"> 
+    <h3 class="moduleName"></h3>
+    <div class="moduleData">
+      <div class="row">
+        <h3></h3>
+      </div>
+    </div>
+  </article>
+
+  <article class="white-panel clone" id="cloneArticleWeather"> 
+    <h3 class="moduleName"></h3>
+    <div class="moduleData"></div>
+  </article>
+
+  <article class="white-panel clone" id="cloneArticleCalendar"> 
+    <h3 class="moduleName"></h3>
+    <div class="moduleData"></div>
+  </article>
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="userModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <div class="userName"></div>
+        <div class="userEmail"></div>
+        <div>
+          <input class="alertText" type="text"/>
+          <button class="alertSendButton btn">Send Alert</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="addTenantModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="newHouseModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+          <h4 class="property">New Property</h4>
+          <input type="text" id="newHouseAddress" placeholder="Address of new House" />
+          <input type="text" id="newHouseCalendar" placeholder="Source of Google Calendar" />
+          <button id="createHouse" class="btn">Add House</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</div>
+
+</body>
+
+  <script src="index.js"></script>
+    <script src="js/hmpg.js"></script>
+
+</html>

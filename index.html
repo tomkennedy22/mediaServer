@@ -1,38 +1,86 @@
-<!doctype html>
-<head>
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://getbootstrap.com/examples/signin/ -->
+<html lang="en">
 
-	<title>TK's Media Server</title>
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" >
-	<link rel="shortcut icon" href="img/PQ.png" >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="description" content="hmpg!!!">
+    <link rel="shortcut icon" href="img/icon.png">
+    <meta name="author" content="hmpg team">
+    <title>hmpg Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href="./index_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./index_files/signin.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="js/bootstrap.min.js"></script>
 </head>
 
-<html>
-	<body>
-		<div class="big-header-container">
-		<div id="content" >
-			<img id="logo" src="img/logo.png">
-			<span class="main-text">Enter ingredients from from your pantry to discover a world of possible recipes.</br> Log in to save your favorite recipes for the future!</span>
-			</br>
-			<div id="insert">
-				<input type="textbox" id="textIngredient" placeholder="Type Ingredient Here!">
-				<!--<button type="button" id="addIngredient">Add</button>-->
-				<i id="search" class="fa fa-arrow-circle-right fa-3x"></i>
-				<ul id="ingredientList"></ul>
-			</div>
+<body class="page">
+    <nav class="navbar navbar-default navnav" id="navID">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+            Welcome to hmpg
+          </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="form-signin">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <div id="loginForm" >
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" autofocus="" required="">
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                <button class="btn btn-lg btn-primary btn-block" id="signinButton" name="login">Sign in</button>
+                <button class="btn btn-lg btn-primary btn-block" id="createAccountButton" name="create">Create Account</button>
+            </div>
+        
+        </div>
+    </div>
+    <!-- /container -->
+    <div class="modal fade" id="createAccountModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Create Account</h4>
+                </div>
+                <div class="modal-body">
+               <label for="inputFName" class="sr-only">First Name</label>
+                <input type="text" id="inputFName" class="form-control" placeholder="First Name" required="">
+                <label for="inputLName" class="sr-only">Last Name</label>
+                <input type="text" id="inputLName" class="form-control" placeholder="Last Name" required="">
+                <label for="inputEmailCreate" class="sr-only">Email</label>
+                <input type="email" id="inputEmailCreate" class="form-control" placeholder="Email" required=="">
+                <label for="inputPasswordCreate" class="sr-only">Password</label>
+                <input type="password" id="inputPasswordCreate" class="form-control" placeholder="Password" required="">
+                <label for="inputPasswordCreateConfirm" class="sr-only">Confirm Password</label>
+                <input type="password" id="inputPasswordCreateConfirm" class="form-control" placeholder="Confirm Password" required="">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="isLandlord" value="Landlord">Landlord</label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="isLandlord" value="Tenant">Tenant</label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" id="createAccountSubmit" name="create" type="submit">Create Account</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!--<script src="js/login.js"></script>-->
+</body>
 
-			<div id="displayRecipes" style="display:none;">
-				<div id="scrollContent">
-
-				</div>
-			</div>
-		</div>
-		</div>
-
-	</body>
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="js/dw_con_scroller.js" type="text/javascript"></script>
-  	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  	<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="js/hmpg.js"></script>
 
 </html>
