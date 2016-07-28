@@ -20,11 +20,13 @@ function saveData(){
 }
 */
 $(document).ready(function(){
+	var globalData = {};
+	var filters = [];
 	addListeners();
-getJSONFromLink("web/info.json");
+	getJSONFromLink("web/info.json");
 
 	});
-var globalData = {};
+
 
 
 function getJSONFromLink(link) {
@@ -40,14 +42,19 @@ function getJSONFromLink(link) {
 
 
 
-function filterMedia(key, value){
+function filterMedia(filters){
 
 		console.log('in filter media');
 		console.log(globalData);
 		console.log(key, value);
-	    var returnedData = $.grep(globalData['Media'], function (element, index) {
-		    return element[key] == value;
-		});
+
+		$.each(filters, function(){
+			var key = this[0];
+			var value = this[1];
+			var returnedData = $.grep(globalData['Media'], function (element, index) {
+		    	return element[key] == value;
+			});
+		})
 
 	    console.log(returnedData);
 	    populateMedia(returnedData);
@@ -71,7 +78,7 @@ function populateMedia(data){
 function addListeners(){
 	$('#spooky').on('click', function(){
 		console.log('filtering on scary');
-		filterMedia('genre', 'Scary');
+		filterMedia(['genre', 'Scary']);
 	});
 }
 /*
