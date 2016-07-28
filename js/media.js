@@ -81,6 +81,8 @@ function populateMedia(data){
 function addListeners(){
 	$('#genreSelect').on('change', function(){
 		var option = $('#genreSelect option:selected').text();
+		if option === 'Genre'
+			return;
 		console.log('filtering on ');
 		filterMedia([['genre', option]]);
 	});
