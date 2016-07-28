@@ -33,7 +33,8 @@ function getJSONFromLink(link) {
 	    	console.log(this);
 	    	var html = $('#movieClone').clone();
 	    	$(html).find('.name').html(this['name']);
-	    	$(html).css('display','inline');
+	    	$(html).find('.poster').html(this['imageUrl']);
+	    	$(html).removeAttr('display');
 	    	console.log(html);
 	    	console.log($('ul.media'));
 	    	$('ul.media').append(html);
