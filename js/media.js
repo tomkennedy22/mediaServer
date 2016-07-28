@@ -29,7 +29,7 @@ function getJSONFromLink(link) {
 	    console.log(data);
 	    globalData = data;
 
-	    $.each(data, function(){
+	    $.each(data['Media'], function(){
 	    	console.log(this);
 	    })
 	  });
