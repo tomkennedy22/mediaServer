@@ -28,12 +28,16 @@ function getJSONFromLink(link) {
 		console.log('in getJSON');
 	    console.log(data);
 	    globalData = data;
+
+	    $.each(data, function(){
+	    	console.log(this);
+	    })
 	  });
 
 }
 
-getJSONFromLink("http://162.243.139.175/mediaServer/web/info.json");
-
+//getJSONFromLink("http://162.243.139.175/mediaServer/web/info.json");
+getJSONFromLink("web/info.json");
 /*
 function updateLocalStorage(userId){
 	var accts = globalData.Account;
