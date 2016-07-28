@@ -46,11 +46,12 @@ function filterMedia(filters){
 
 		console.log('in filter media');
 		console.log(globalData);
+		var returnedData = globalData['Media'];
 
 		$.each(filters, function(){
 			var key = this[0];
 			var value = this[1];
-			var returnedData = $.grep(globalData['Media'], function (element, index) {
+			returnedData = $.grep(returnedData, function (element, index) {
 		    	return element[key] == value;
 			});
 		})
