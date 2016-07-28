@@ -29,6 +29,22 @@ function getJSONFromLink(link) {
 	    console.log(data);
 	    globalData = data;
 
+	    populateMedia(data);
+});
+}
+
+
+
+function filterMedia(key, value){
+
+	    var returnedData = $.grep(globalData['Media'], function (element, index) {
+		    return element[key] == value;
+		});
+
+	    populateMedia(returnedData);
+}
+
+function populateMedia(data){
 	    $.each(data['Media'], function(){
 	    	console.log(this);
 	    	var html = $('#movieClone').clone();
@@ -37,11 +53,16 @@ function getJSONFromLink(link) {
 	    	$(html).find('a').removeAttr('style');
 	    //	console.log(html);
 	    //	console.log($('ul.media'));
-	    	$('ul.media').append(html);
+	    	$('ul.media').prepend(html);
 	    })
-	  });
-
 }
+
+
+$('#spooky').on('click', function(){
+	console.log('filtering on scary');
+	populateMedia('genre', 'Scary');
+});
+
 
 /*
 
