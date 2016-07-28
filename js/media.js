@@ -31,9 +31,11 @@ function getJSONFromLink(link) {
 
 	    $.each(data['Media'], function(){
 	    	console.log(this);
-	    	var html = $('movieClone').clone();
+	    	var html = $('#movieClone').clone();
 	    	$(html).find('.name').html(this['name']);
+	    	$(html).css('display','inline');
 	    	console.log(html);
+	    	console.log($('ul.media'));
 	    	$('ul.media').append(html);
 	    })
 	  });
