@@ -32,7 +32,7 @@ function getJSONFromLink(link) {
 
 }
 
-getJSONFromLink("http://162.243.139.175/mediaServer/web/info.json");
+getJSONFromLink("web/info.json");
 
 /*
 function updateLocalStorage(userId){
