@@ -23,7 +23,7 @@ var globalData = {};
 
 
 function getJSONFromLink(link) {
-	console.log('in getjsonfrom link');
+	console.log('in getjsonfrom link', link);
 	$.getJSON( link, function( data ) {
 		console.log('in getJSON');
 	    console.log(data);
@@ -32,7 +32,7 @@ function getJSONFromLink(link) {
 
 }
 
-getJSONFromLink("web/info.json");
+getJSONFromLink("http://162.243.139.175/mediaServer/web/info.json");
 
 /*
 function updateLocalStorage(userId){
