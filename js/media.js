@@ -19,7 +19,7 @@ function saveData(){
 	});
 }
 */
-$(document).ready(function{
+$(document).ready(function(){
 var globalData = {};
 
 
