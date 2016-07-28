@@ -42,10 +42,14 @@ function getJSONFromLink(link) {
 
 function filterMedia(key, value){
 
+		console.log('in filter media');
+		console.log(globalData);
+		console.log(key, value);
 	    var returnedData = $.grep(globalData['Media'], function (element, index) {
 		    return element[key] == value;
 		});
 
+	    console.log(returnedData);
 	    populateMedia(returnedData);
 }
 
