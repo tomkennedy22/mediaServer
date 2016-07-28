@@ -54,6 +54,8 @@ function filterMedia(key, value){
 }
 
 function populateMedia(data){
+
+	$('ul.media').empty();
 	    $.each(data, function(){
 	    	console.log(this);
 	    	var html = $('#movieClone').clone();
