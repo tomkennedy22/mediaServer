@@ -32,9 +32,9 @@ function getJSONFromLink(link) {
 	    $.each(data['Media'], function(){
 	    	console.log(this);
 	    	var html = $('#movieClone').clone();
-	    	$(html).find('.name').html(this['name']);
-	    	$(html).find('.poster').attr('src', this['imageUrl']);
-	    	$(html).removeAttr('style');
+	    	$(html).find('a > .name').html(this['name']);
+	    	$(html).find('a > .poster').attr('src', this['imageUrl']);
+	    	$(html).find('a').removeAttr('style');
 	    //	console.log(html);
 	    //	console.log($('ul.media'));
 	    	$('ul.media').append(html);
