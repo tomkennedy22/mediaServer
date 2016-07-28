@@ -1,0 +1,9 @@
+ul.media li {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+img.poster {
+	width: 100px;
+}

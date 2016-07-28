@@ -21,7 +21,7 @@ function saveData(){
 */
 var globalData = {};
 
-$.getJSON( "web/info.json", function( data ) {
+$.getJSON( "http://162.243.139.175/mediaServer/web/info.json", function( data ) {
 	console.log('in getJSON');
   console.log(data);
   globalData = data;
