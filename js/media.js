@@ -20,6 +20,10 @@ function saveData(){
 }
 */
 $(document).ready(function(){
+	addListeners();
+getJSONFromLink("web/info.json");
+
+	});
 var globalData = {};
 
 
@@ -64,8 +68,6 @@ function addListeners(){
 		populateMedia('genre', 'Scary');
 	});
 }
-
-});
 /*
 
 <li>
@@ -78,7 +80,7 @@ function addListeners(){
 */
 
 //getJSONFromLink("http://162.243.139.175/mediaServer/web/info.json");
-getJSONFromLink("web/info.json");
+
 /*
 function updateLocalStorage(userId){
 	var accts = globalData.Account;
