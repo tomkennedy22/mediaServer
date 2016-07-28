@@ -79,9 +79,10 @@ function populateMedia(data){
 }
 
 function addListeners(){
-	$('#spooky').on('click', function(){
-		console.log('filtering on scary');
-		filterMedia([['genre', 'Scary']]);
+	$('#genreSelect').on('change', function(){
+		var option = $('#genreSelect option:selected').text();
+		console.log('filtering on ');
+		filterMedia([['genre', option]]);
 	});
 }
 /*
