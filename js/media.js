@@ -46,7 +46,6 @@ function filterMedia(filters){
 
 		console.log('in filter media');
 		console.log(globalData);
-		console.log(key, value);
 
 		$.each(filters, function(){
 			var key = this[0];
