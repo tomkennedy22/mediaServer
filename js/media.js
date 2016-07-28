@@ -34,7 +34,7 @@ function getJSONFromLink(link) {
 	    console.log(data);
 	    globalData = data;
 
-	    populateMedia(data);
+	    populateMedia(data['Media']);
 });
 }
 
@@ -54,7 +54,7 @@ function filterMedia(key, value){
 }
 
 function populateMedia(data){
-	    $.each(data['Media'], function(){
+	    $.each(data, function(){
 	    	console.log(this);
 	    	var html = $('#movieClone').clone();
 	    	$(html).find('a > .name').html(this['name']);
