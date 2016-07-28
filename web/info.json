@@ -28,10 +28,34 @@
       "genre":"Kids"
       },
         {
+      "name": "Toy Story 2",
+      "description":"sequel movie about toys with weird lives",
+      "filePath":"no file path",
+      "imageUrl":"http://www.impawards.com/1999/posters/toy_story_two.jpg",
+      "views":0,
+      "genre":"Kids"
+      },
+        {
+      "name": "Toy Story 3",
+      "description":"trequel about toys with weird lives",
+      "filePath":"no file path",
+      "imageUrl":"http://pop-break.com/wp-content/uploads/2015/06/toy-story-3-theatrical-poster.jpg",
+      "views":0,
+      "genre":"Kids"
+      },
+        {
       "name": "Star Wars: The Force Awakens",
       "description":"movie about an angsty religious kid",
       "filePath":"no file path",
       "imageUrl":"http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/11/FinnTFA.jpg",
+      "views":0,
+      "genre":"Space Opera"
+      },
+        {
+      "name": "Star Wars: The Phantom Menace",
+      "description":"movie about a kid that takes on an entire army",
+      "filePath":"no file path",
+      "imageUrl":"http://www.movieartarena.com/imgs/episode1f.jpg",
       "views":0,
       "genre":"Space Opera"
       },
