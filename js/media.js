@@ -31,10 +31,24 @@ function getJSONFromLink(link) {
 
 	    $.each(data['Media'], function(){
 	    	console.log(this);
+	    	var html = $('movieClone').clone();
+	    	$(html).find('.name').html(this['name']);
+	    	$('ul.media').append(html);
 	    })
 	  });
 
 }
+
+/*
+
+<li>
+        <a href="#">
+            <img class= "poster" src = ""/> 
+            <h4 class="name"></h4>
+            <p>Watch now</p>
+        </a>
+    </li>
+*/
 
 //getJSONFromLink("http://162.243.139.175/mediaServer/web/info.json");
 getJSONFromLink("web/info.json");
