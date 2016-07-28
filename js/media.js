@@ -19,6 +19,7 @@ function saveData(){
 	});
 }
 */
+$(document).ready(function{
 var globalData = {};
 
 
@@ -57,13 +58,14 @@ function populateMedia(data){
 	    })
 }
 
+function addListeners(){
+	$('#spooky').on('click', function(){
+		console.log('filtering on scary');
+		populateMedia('genre', 'Scary');
+	});
+}
 
-$('#spooky').on('click', function(){
-	console.log('filtering on scary');
-	populateMedia('genre', 'Scary');
 });
-
-
 /*
 
 <li>
