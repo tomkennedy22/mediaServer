@@ -15,11 +15,41 @@
   		"name": "Mr. Brooks",
   		"description":"movie about your next door neighbor",
   		"filePath":"no file path",
-  		"imageUrl":"http://www.joblo.com/movie-posters/2007/mr-brooks#image-19245",
+  		"imageUrl":"https://www.movieposter.com/posters/archive/main/95/MPW-47743.jpg",
   		"views":0,
   		"genre":"Drama"
-
-
-  		}
+  		},
+        {
+      "name": "Toy Story",
+      "description":"movie about toys with weird lives",
+      "filePath":"no file path",
+      "imageUrl":"http://www.impawards.com/1995/posters/toy_story_ver1.jpg",
+      "views":0,
+      "genre":"Kids"
+      },
+        {
+      "name": "Star Wars: The Force Awakens",
+      "description":"movie about an angsty religious kid",
+      "filePath":"no file path",
+      "imageUrl":"http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/11/FinnTFA.jpg",
+      "views":0,
+      "genre":"Space Opera"
+      },
+        {
+      "name": "Into the Wild",
+      "description":"movie about a kid trying to be eaten by bears",
+      "filePath":"no file path",
+      "imageUrl":"http://www.impawards.com/2007/posters/into_the_wild.jpg",
+      "views":0,
+      "genre":"Drama"
+      },
+        {
+      "name": "30 for 30: The Best That Never Was",
+      "description":"movie about why you buy health insurance",
+      "filePath":"no file path",
+      "imageUrl":"http://sportvideos.com/images/P/TM0752.jpg",
+      "views":0,
+      "genre":"Documentary"
+      }
   ]
 }
