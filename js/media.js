@@ -34,9 +34,9 @@ function getJSONFromLink(link) {
 	    	var html = $('#movieClone').clone();
 	    	$(html).find('.name').html(this['name']);
 	    	$(html).find('.poster').html(this['imageUrl']);
-	    	$(html).removeAttr('display');
-	    	console.log(html);
-	    	console.log($('ul.media'));
+	    	$(html).removeAttr('style');
+	    //	console.log(html);
+	    //	console.log($('ul.media'));
 	    	$('ul.media').append(html);
 	    })
 	  });
