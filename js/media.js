@@ -72,7 +72,7 @@ function populateMedia(data){
 	    	$(html).find('a > .name').html(this['name']);
 	    	$(html).find('a > .poster').attr('src', this['imageUrl']);
 	    	$(html).find('a').removeAttr('style');
-	    	$(html).find('a').attr('href', this['filePath']);
+	    	$(html).find('a').attr('data-src', this['filePath']);
 	    //	console.log(html);
 	    //	console.log($('ul.media'));
 	    	$('ul.media').prepend(html);
@@ -87,6 +87,15 @@ function addListeners(){
 		console.log('filtering on ');
 		filterMedia([['genre', option]]);
 	});
+
+	$('#myModal').modal();
+
+	$('a.movieLink').on('click', function(){
+		var src = $(this).attr('data-src');
+		console.log(src);
+		$('#myModal').modal('show');
+		$('#htmlVideo').find('source').attr('src', src);
+	}) 
 }
 /*
 
