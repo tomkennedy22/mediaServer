@@ -69,6 +69,8 @@ function populateMedia(data){
 	    $.each(data, function(){
 	    	console.log(this);
 	    	var html = $('#movieClone').clone();
+	    	console.log($(html).find('a').attr('class'));
+	    	$(html).removeAttr('id');
 	    	$(html).find('a > .name').html(this['name']);
 	    	$(html).find('a > .poster').attr('src', this['imageUrl']);
 	    	$(html).find('a').removeAttr('style');
