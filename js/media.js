@@ -79,7 +79,8 @@ function populateMedia(data){
 	    		var src = $(this).attr('data-src');
 				console.log(src);
 				$('#videoModal').modal('show');
-				$('#htmlVideo').find('source').attr('src', src);
+				//$('#htmlVideo').find('source').attr('src', src);
+				$('#htmlVideo').attr('src', src);
 	    	});
 	    //	console.log(html);
 	    //	console.log($('ul.media'));
