@@ -72,6 +72,7 @@ function populateMedia(data){
 	    	$(html).find('a > .name').html(this['name']);
 	    	$(html).find('a > .poster').attr('src', this['imageUrl']);
 	    	$(html).find('a').removeAttr('style');
+	    	$(html).find('a').attr('href', this['filePath']);
 	    //	console.log(html);
 	    //	console.log($('ul.media'));
 	    	$('ul.media').prepend(html);
