@@ -78,7 +78,7 @@ function populateMedia(data){
 	    	$(html).find('a').on('click', function(){
 	    		var src = $(this).attr('data-src');
 				console.log(src);
-				$('#myModal').modal('show');
+				$('#videoModal').modal('show');
 				$('#htmlVideo').find('source').attr('src', src);
 	    	});
 	    //	console.log(html);
@@ -101,7 +101,7 @@ function addListeners(){
 	$('movieLink').on('click', function(){
 		var src = $(this).attr('data-src');
 		console.log(src);
-		$('#myModal').modal('show');
+		$('#videoModal').modal('show');
 		$('#htmlVideo').find('source').attr('src', src);
 	}) ;
 }
