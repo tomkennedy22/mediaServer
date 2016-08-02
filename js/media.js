@@ -92,7 +92,7 @@ function addListeners(){
 	$('#genreSelect > li > a').on('click', function(){
 		var option = $(this).text();
 		if (option === 'Genre'){
-			return;}
+			filterMedia([]);}
 		console.log('filtering on ');
 		filterMedia([['genre', option]]);
 	});
