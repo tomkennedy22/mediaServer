@@ -15,31 +15,28 @@
 </head>
 
 
-    <div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-3 col-lg-2">
-      <nav class="navbar navbar-default navbar-fixed-side">
-        <!-- normal collapsible navbar markup -->
-            <select id="genreSelect">
-                <option value="Genre">Genre</option>
-                <option value="Scary">Scary</option>
-                <option value="Kids">Kids</option>
-                <option value="Space Opera">Space Opera</option>
-                <option value="Drama">Drama</option>
-            </select>
-      </nav>
-    </div>
-    <div class="col-sm-9 col-lg-10">
-      <!-- your page content -->
-    </div>
-  </div>
-</div>
+<ul class="nav nav-tabs">
+  ...
+  <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Dropdown <span class="caret"></span>
+    </a>
+    <ul id="genreSelect">
+                <li value="Genre">Genre</li>
+                <li value="Scary">Scary</li>
+                <li value="Kids">Kids</li>
+                <li value="Space Opera">Space Opera</li>
+                <li value="Drama">Drama</li>
+    </ul>
+  </li>
+  ...
+</ul>
 
 
-<div class="container-fluid">
+
     <ul class="media"><!-- more list items -->
 </ul>
-</div>
+
 </body>
 
 <div class="modal fade" id="videoModal" tabindex="-1" role="dialog">
