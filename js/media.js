@@ -89,8 +89,8 @@ function populateMedia(data){
 }
 
 function addListeners(){
-	$('#genreSelect').on('change', function(){
-		var option = $('#genreSelect option:selected').text();
+	$('#genreSelect > li > a').on('click', function(){
+		var option = $(this).text();
 		if (option === 'Genre'){
 			return;}
 		console.log('filtering on ');
@@ -99,7 +99,7 @@ function addListeners(){
 
 	$('#myModal').modal();
 
-	$('movieLink').on('click', function(){
+	$('.movieLink').on('click', function(){
 		var src = $(this).attr('data-src');
 		console.log(src);
 		$('#videoModal').modal('show');
