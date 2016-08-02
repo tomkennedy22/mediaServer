@@ -14,7 +14,7 @@
   	  	{
   		"name": "Mr. Brooks",
   		"description":"movie about your next door neighbor",
-  		"filePath":"no file path",
+  		"filePath":"media/mr_brooks-tlra_h480p.mov",
   		"imageUrl":"https://www.movieposter.com/posters/archive/main/95/MPW-47743.jpg",
   		"views":0,
   		"genre":"Drama"
@@ -22,7 +22,7 @@
         {
       "name": "Toy Story",
       "description":"movie about toys with weird lives",
-      "filePath":"no file path",
+      "filePath":"media/toystory3ddoublefeature_h480p.mov",
       "imageUrl":"http://www.impawards.com/1995/posters/toy_story_ver1.jpg",
       "views":0,
       "genre":"Kids"
@@ -30,7 +30,7 @@
         {
       "name": "Toy Story 2",
       "description":"sequel movie about toys with weird lives",
-      "filePath":"no file path",
+      "filePath":"media/toystory3ddoublefeature_h480p.mov",
       "imageUrl":"http://www.impawards.com/1999/posters/toy_story_two.jpg",
       "views":0,
       "genre":"Kids"
@@ -38,7 +38,7 @@
         {
       "name": "Toy Story 3",
       "description":"trequel about toys with weird lives",
-      "filePath":"no file path",
+      "filePath":"media/toystory3-tlr1_h480p.mov",
       "imageUrl":"http://pop-break.com/wp-content/uploads/2015/06/toy-story-3-theatrical-poster.jpg",
       "views":0,
       "genre":"Kids"
@@ -46,7 +46,7 @@
         {
       "name": "Star Wars: The Force Awakens",
       "description":"movie about an angsty religious kid",
-      "filePath":"no file path",
+      "filePath":"media/swepvii-tlr2_h480p.mov",
       "imageUrl":"http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/11/FinnTFA.jpg",
       "views":0,
       "genre":"Space Opera"
