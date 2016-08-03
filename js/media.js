@@ -65,14 +65,19 @@ function createFilters(data) {
 		
 	});
 
-	console.log(yearArray);
-	console.log(genreArray);
-
 	yearArray = yearArray.unique();
 	genreArray = genreArray.unique();
 
 	console.log(yearArray);
 	console.log(genreArray);
+
+	$.each(genreArray, function(){
+
+		var clone = $('#genreSelect > li.proto').clone();
+		$(clone).attr('value', this).removeAttr('class');
+		$(clone).find('a').text(this);
+		$('#genreSelect').append(clone);
+	});
 }
 
 
