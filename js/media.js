@@ -13,6 +13,23 @@ function inArray (arr, node) {
     return false; 
 }; 
 
+Array.prototype.contains = function(v) {
+    for(var i = 0; i < this.length; i++) {
+        if(this[i] === v) return true;
+    }
+    return false;
+};
+
+Array.prototype.unique = function() {
+    var arr = [];
+    for(var i = 0; i < this.length; i++) {
+        if(!arr.contains(this[i])) {
+            arr.push(this[i]);
+        }
+    }
+    return arr; 
+}
+
 $(document).ready(function(){
 	var filters = [];
 	addListeners();
@@ -42,13 +59,17 @@ function createFilters(data) {
 	var genreArray = [];
 
 	$.each(data, function(){
-		if (!inArray(yearArray, this['year'])){
-			yearArray.push(this['year']);
-		}
-		if (!inArray(genreArray, this['genre'])){
-			genreArray.push(this['genre']);
-		}
+		
+		yearArray.push(this['year']);	
+		genreArray.push(this['genre']);
+		
 	});
+
+	console.log(yearArray);
+	console.log(genreArray);
+
+	yearArray = yearArray.unique();
+	genreArray = genreArray.unique();
 
 	console.log(yearArray);
 	console.log(genreArray);
