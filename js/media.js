@@ -2,9 +2,9 @@ console.log('in media.js');
 
 //var root_url = "http://localhost:8888/hmpg/web/api/index.php/";
 var write_url = "web/write.php";
+var globalData = {};
 
 $(document).ready(function(){
-	var globalData = {};
 	var filters = [];
 	addListeners();
 	getJSONFromLink("web/info.json");
