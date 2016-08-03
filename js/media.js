@@ -105,7 +105,7 @@ function createFilters(data) {
 
 	filters['minYear'] = Array.min(yearArray);
 	filters['maxYear'] = Array.max(yearArray);
-	addSlider();
+	addSlider(Array.min(yearArray), Array.max(yearArray));
 	console.log(filters);
 }
 
