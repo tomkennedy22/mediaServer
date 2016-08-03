@@ -248,9 +248,9 @@ function addSlider(minYear, maxYear) {
     $( "#rating-slider-range" ).slider({
       range: true,
       min: 0,
-      max: 5,
+      max: 10,
       step: .5,
-      values: [ 0, 5 ],
+      values: [ 0, 10 ],
       slide: function( event, ui ) {
         $( "#ratingSlider" ).val(  ui.values[ 0 ] + " - " + ui.values[ 1 ] );
       }
