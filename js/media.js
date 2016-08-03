@@ -160,7 +160,6 @@ function populateMedia(data){
 		    		console.log(imdbLink);
 		    		console.log(data);
 		    	});
-	    })
 	    	});
 	    //	console.log(html);
 	    //	console.log($('ul.media'));
