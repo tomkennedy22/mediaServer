@@ -3,6 +3,10 @@ console.log('in media.js');
 //var root_url = "http://localhost:8888/hmpg/web/api/index.php/";
 var write_url = "web/write.php";
 var globalData = {};
+var filters = {'genre':'',
+			   'minYear':'',
+			   'maxYear':''
+			  }
 
 function inArray (arr, node) { 
     $.each(arr, function(){
@@ -18,6 +22,14 @@ Array.prototype.contains = function(v) {
         if(this[i] === v) return true;
     }
     return false;
+};
+
+Array.min = function( array ){
+    return Math.min.apply( Math, array );
+};
+
+Array.max = function( array ){
+    return Math.max.apply( Math, array );
 };
 
 Array.prototype.unique = function() {
@@ -68,6 +80,8 @@ function createFilters(data) {
 	yearArray = yearArray.unique();
 	genreArray = genreArray.unique();
 
+	yearArray.sort();
+
 	console.log(yearArray);
 	console.log(genreArray);
 
@@ -86,7 +100,13 @@ function createFilters(data) {
 			console.log('filtering on ');
 			filterMedia([['genre', option]]);
 		});
+
+
 	});
+
+	filters['minYear'] = Array.min(yearArray);
+	filters['maxYear'] = Array.max(yearArray);
+	console.log(filters);
 }
 
 
@@ -190,7 +210,7 @@ function addSlider() {
 
 
     $( "#slider-range" ).on( "slidechange", function( event, ui ) {
-    	alert('changed slider!');
+
     } );
  }
 /*
