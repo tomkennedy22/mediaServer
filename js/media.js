@@ -4,36 +4,11 @@ console.log('in media.js');
 var write_url = "web/write.php";
 var globalData = {};
 
-function filterMedia(){
-
-		console.log('in filter media');
-		console.log(globalData);
-		console.log(filters);
-		var returnedData = globalData['Media'];
-
-		//genre
-		returnedData = $.grep(returnedData, function (element, index) {
-	    	return element['genre'] == filters['genre'] || filters['genre'] === 'Genre';
-		});
-
-		//years
-		returnedData = $.grep(returnedData, function (element, index) {
-	    	return element['year'] >= filters['minYear'] && element['year'] <= filters['maxYear'];
-		});
-
-	    console.log(returnedData);
-	    populateMedia(returnedData);
-}
 
 var filters = {'genre':'',
 			   'minYear':'',
 			   'maxYear':''
 			  }
-
-Object.observe(filters, function(){
-	alert('changes filters');
-	console.log(filters);
-})
 
 function inArray (arr, node) { 
     $.each(arr, function(){
@@ -120,11 +95,9 @@ function createFilters(data) {
 
 		$(clone).find('a').on('click', function(){
 			var option = $(this).text();
-			if (option === 'Genre'){
-				populateMedia(globalData);
-				return;}
 			console.log('filtering on ');
-			filterMedia([['genre', option]]);
+			filters['genre'] = option;
+			filterMedia();
 		});
 
 
@@ -136,6 +109,26 @@ function createFilters(data) {
 	console.log(filters);
 }
 
+function filterMedia(){
+
+		console.log('in filter media');
+		//console.log(globalData);
+		console.log(filters);
+		var returnedData = globalData['Media'];
+
+		//genre
+		returnedData = $.grep(returnedData, function (element, index) {
+	    	return element['genre'] == filters['genre'] || filters['genre'] === 'Genre';
+		});
+
+		//years
+		returnedData = $.grep(returnedData, function (element, index) {
+	    	return element['year'] >= filters['minYear'] && element['year'] <= filters['maxYear'];
+		});
+
+	    console.log(returnedData);
+	    populateMedia(returnedData);
+}
 
 function populateMedia(data){
 
@@ -165,11 +158,9 @@ function populateMedia(data){
 function addListeners(){
 	$('#genreSelect > li > a').on('click', function(){
 		var option = $(this).text();
-		if (option === 'Genre'){
-			populateMedia(globalData);
-				return;}
 		console.log('filtering on ');
-		filterMedia([['genre', option]]);
+		filters['genre'] = option;
+		filterMedia();
 	});
 
 	$('#myModal').modal();
@@ -185,7 +176,7 @@ function addListeners(){
 function saveData(){
 	console.log('Saving data!!!');
 	console.log(globalData);
-
+/*
 	$.ajax
 	    ({
 	        type: "POST",
@@ -196,6 +187,7 @@ function saveData(){
 	        success: function () {alert("Thanks!"); },
 	        failure: function() {alert("Error!");}
 	});
+*/
 }
 
 
@@ -218,6 +210,7 @@ function addSlider(minYear, maxYear) {
     	var values = $( "#slider-range" ).slider( "values" );
     	filters['minYear'] = values[0];
     	filters['maxYear'] = values[1];
+    	filterMedia();
     } );
  }
 /*
