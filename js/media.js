@@ -164,12 +164,12 @@ function populateMedia(data){
 		    		$('#movieInfo > .rated').text('Rated '+ data['Rated']);
 
 		    		if ( data['imdbRating'] != 'N/A'){
-		    			$('#movieInfo > .rating').text(data['imdbRating']);
+		    			$('#movieInfo > .rating').text(data['imdbRating'] + ' rating');
 		    		}
 		    		else {
 		    			$('#movieInfo > .rating').text('');
 		    		}
-		    		
+
 		    	});
 	    	});
 	    //	console.log(html);
