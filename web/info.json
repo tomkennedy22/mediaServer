@@ -9,8 +9,6 @@
   		"views":0,
   		"genre":"Scary",
       "year":
-
-
   		},
   	  	{
   		"name": "Mr. Brooks",
@@ -78,7 +76,7 @@
         {
       "name": "Jason Bourne",
       "description":"movie about a guy that fights a whole bunch of other guys",
-      "filePath":"no file path",
+      "filePath":"media/jasonbourne-tlr1_h480p.mov",
       "imageUrl":"https://cinemabravo.files.wordpress.com/2016/02/jasonbourne-poster1.jpg",
       "views":0,
       "genre":"Action",
@@ -87,7 +85,7 @@
         {
       "name": "Finding Dory",
       "description":"movie about a fish with the memory span of a fish",
-      "filePath":"no file path",
+      "filePath":"media/findingdory-tlr2_h480p.mov",
       "imageUrl":"http://www.impawards.com/2016/posters/finding_dory_ver8.jpg",
       "views":0,
       "genre":"Kids",
@@ -96,7 +94,7 @@
         {
       "name": "Suicide Squad",
       "description":"movie about why you leave the door open in prison",
-      "filePath":"no file path",
+      "filePath":"media/suicide-squad-harley-quinn-clp2_h480p.mov",
       "imageUrl":"http://www.comingsoon.net/assets/uploads/gallery/suicide-squad/12489243_1674589672821667_4430624289856009994_o.jpg",
       "views":0,
       "genre":"Action",
