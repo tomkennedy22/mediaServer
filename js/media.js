@@ -3,22 +3,6 @@ console.log('in media.js');
 //var root_url = "http://localhost:8888/hmpg/web/api/index.php/";
 var write_url = "web/write.php";
 
-function saveData(){
-	console.log('Saving data!!!');
-	console.log(globalData);
-
-	$.ajax
-	    ({
-	        type: "POST",
-	        dataType : 'json',
-	        async: false,
-	        url: write_url,
-	        data: { data: JSON.stringify(globalData) },
-	        success: function () {alert("Thanks!"); },
-	        failure: function() {alert("Error!");}
-	});
-}
-
 $(document).ready(function(){
 	var globalData = {};
 	var filters = [];
@@ -107,6 +91,22 @@ function addListeners(){
 		$('#videoModal').modal('show');
 		$('#htmlVideo').find('source').attr('src', src);
 	}) ;
+}
+
+function saveData(){
+	console.log('Saving data!!!');
+	console.log(globalData);
+
+	$.ajax
+	    ({
+	        type: "POST",
+	        dataType : 'json',
+	        async: false,
+	        url: write_url,
+	        data: { data: JSON.stringify(globalData) },
+	        success: function () {alert("Thanks!"); },
+	        failure: function() {alert("Error!");}
+	});
 }
 /*
 
