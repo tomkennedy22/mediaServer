@@ -68,7 +68,7 @@ function getJSONFromLink(link) {
 	    $.each(data['Media'], function(){
 	    	var imdbLink = 'http://www.omdbapi.com/?t=';
 	    	var name = this['name'];
-	    	name = name.replace(' ', '+');
+	    	name = name.replace(/ /g, '+');
 	    	imdbLink += name;
 	    	alert(imdbLink);
 	    })
