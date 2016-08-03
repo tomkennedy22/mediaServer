@@ -6,7 +6,7 @@ ul.media li {
 
 #movieInfo > li {
     width: 30%;
-    margin-left: 10%
+    margin-left: 10%;
     display: inline-block;
     vertical-align: top;
 }

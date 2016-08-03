@@ -165,6 +165,9 @@ function populateMedia(data){
 
 		    		if ( data['imbdRating'] != 'N/A')
 		    			{$('#movieInfo > .rating').text(data['imbdRating']);}
+		    		else {
+		    			$('#movieInfo > .rating').text('');
+		    		}
 		    	});
 	    	});
 	    //	console.log(html);
