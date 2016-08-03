@@ -7,7 +7,8 @@
   		"filePath":"no file path",
   		"imageUrl":"http://www.impawards.com/1995/posters/seven_ver1.jpg",
   		"views":0,
-  		"genre":"Scary"
+  		"genre":"Scary",
+      "year":
 
 
   		},
@@ -17,7 +18,8 @@
   		"filePath":"media/mr_brooks-tlra_h480p.mov",
   		"imageUrl":"https://www.movieposter.com/posters/archive/main/95/MPW-47743.jpg",
   		"views":0,
-  		"genre":"Drama"
+  		"genre":"Drama",
+      "year":
   		},
         {
       "name": "Toy Story",
@@ -25,7 +27,8 @@
       "filePath":"media/toystory3ddoublefeature_h480p.mov",
       "imageUrl":"http://www.impawards.com/1995/posters/toy_story_ver1.jpg",
       "views":0,
-      "genre":"Kids"
+      "genre":"Kids",
+      "year":
       },
         {
       "name": "Toy Story 2",
@@ -33,7 +36,8 @@
       "filePath":"media/toystory3ddoublefeature_h480p.mov",
       "imageUrl":"http://www.impawards.com/1999/posters/toy_story_two.jpg",
       "views":0,
-      "genre":"Kids"
+      "genre":"Kids",
+      "year":
       },
         {
       "name": "Toy Story 3",
@@ -41,7 +45,8 @@
       "filePath":"media/toystory3-tlr1_h480p.mov",
       "imageUrl":"http://pop-break.com/wp-content/uploads/2015/06/toy-story-3-theatrical-poster.jpg",
       "views":0,
-      "genre":"Kids"
+      "genre":"Kids",
+      "year":
       },
         {
       "name": "Star Wars: The Force Awakens",
@@ -49,7 +54,8 @@
       "filePath":"media/swepvii-tlr2_h480p.mov",
       "imageUrl":"http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/11/FinnTFA.jpg",
       "views":0,
-      "genre":"Space Opera"
+      "genre":"Space Opera",
+      "year":
       },
         {
       "name": "Star Wars: The Phantom Menace",
@@ -57,23 +63,44 @@
       "filePath":"media/swepisode1-tlr1_h480p.mov",
       "imageUrl":"http://www.movieartarena.com/imgs/episode1f.jpg",
       "views":0,
-      "genre":"Space Opera"
+      "genre":"Space Opera",
+      "year":
       },
         {
       "name": "Into the Wild",
       "description":"movie about a kid trying to be eaten by bears",
-      "filePath":"no file path",
+      "filePath":"media/into_the_wild_h640w.mov",
       "imageUrl":"http://www.impawards.com/2007/posters/into_the_wild.jpg",
       "views":0,
-      "genre":"Drama"
+      "genre":"Drama",
+      "year":
       },
         {
-      "name": "30 for 30: The Best That Never Was",
-      "description":"movie about why you buy health insurance",
+      "name": "Jason Bourne",
+      "description":"movie about a guy that fights a whole bunch of other guys",
       "filePath":"no file path",
-      "imageUrl":"http://sportvideos.com/images/P/TM0752.jpg",
+      "imageUrl":"https://cinemabravo.files.wordpress.com/2016/02/jasonbourne-poster1.jpg",
       "views":0,
-      "genre":"Documentary"
+      "genre":"Action",
+      "year":
+      },
+        {
+      "name": "Finding Dory",
+      "description":"movie about a fish with the memory span of a fish",
+      "filePath":"no file path",
+      "imageUrl":"http://www.impawards.com/2016/posters/finding_dory_ver8.jpg",
+      "views":0,
+      "genre":"Kids",
+      "year":
+      },
+        {
+      "name": "Suicide Squad",
+      "description":"movie about why you leave the door open in prison",
+      "filePath":"no file path",
+      "imageUrl":"http://www.comingsoon.net/assets/uploads/gallery/suicide-squad/12489243_1674589672821667_4430624289856009994_o.jpg",
+      "views":0,
+      "genre":"Action",
+      "year":
       }
   ]
 }
