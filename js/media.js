@@ -22,8 +22,27 @@ function getJSONFromLink(link) {
 	    console.log(data);
 	    globalData = data;
 
+	    createFilters(data['Media']);
+
 	    populateMedia(data['Media']);
 });
+}
+
+function createFilters(data) {
+	var yearArray = [];
+	var genreArray = [];
+
+	$.each(data, function(){
+		if (!yearArray.inArray(this['year'])){
+			yearArray.push(this['year']);
+		}
+		if (!genreArray.inArray(this['genre'])){
+			genreArray.push(this['genre']);
+		}
+	});
+
+	console.log(yearArray);
+	console.log(genreArray);
 }
 
 
