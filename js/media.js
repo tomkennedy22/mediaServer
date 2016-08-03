@@ -111,22 +111,22 @@ function createFilters(data) {
 
 
 
-function filterMedia(filters){
+function filterMedia(){
 
 		console.log('in filter media');
 		console.log(globalData);
 		console.log(filters);
 		var returnedData = globalData['Media'];
 
-		$.each(filters, function(){
-			console.log(this);
-			var key = this[0];
-			var value = this[1];
-			console.log(key, value);
-			returnedData = $.grep(returnedData, function (element, index) {
-		    	return element[key] == value;
-			});
-		})
+		//genre
+		returnedData = $.grep(returnedData, function (element, index) {
+	    	return element['genre'] == filters['genre'] || filters['genre'] === 'Genre';
+		});
+
+		//years
+		returnedData = $.grep(returnedData, function (element, index) {
+	    	return element['year'] >= filters['minYear'] && element['year'] <= filters['maxYear'];
+		});
 
 	    console.log(returnedData);
 	    populateMedia(returnedData);
@@ -210,7 +210,9 @@ function addSlider(minYear, maxYear) {
 
 
     $( "#slider-range" ).on( "slidechange", function( event, ui ) {
-    	alert($( "#slider-range" ).slider( "values" ));
+    	var values = $( "#slider-range" ).slider( "values" ));
+    	filters['minYear'] = values[0];
+    	filters['maxYear'] = values[1];
     } );
  }
 /*
