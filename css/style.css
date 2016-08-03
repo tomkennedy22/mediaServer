@@ -5,7 +5,6 @@ ul.media li {
 }
 
 #movieInfo > li {
-    width: 30%;
     margin-left: 10%;
     margin-top: 25px;
     display: inline-block;
