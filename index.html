@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <title>Tom's Media Server</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/navbar-fixed-side.css" rel="stylesheet" />
@@ -27,12 +28,14 @@
     </li>
     <li role="presentation" class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-        Media Type <span class="caret"></span>
+        Year <span class="caret"></span>
       </a>
-      <ul id="typeSelect" class="dropdown-menu">
-                <li value="Movie">Movie</li>
-                <li value="TV">TV</li>
-    </ul>
+      <p>
+        <label for="amount">Movie Release Year:</label>
+        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+      </p>
+       
+      <div id="slider-range"></div>
   </li>
 </ul>
 
