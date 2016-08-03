@@ -3,6 +3,7 @@
   [
   	{
   		"name": "Se7en",
+      "searchName": "Se7en",
   		"description":"movie about spooky numbers",
   		"filePath":"no file path",
   		"imageUrl":"http://www.impawards.com/1995/posters/seven_ver1.jpg",
@@ -13,6 +14,7 @@
   		},
   	  	{
   		"name": "Mr. Brooks",
+      "searchName": "Mr. Brooks",
   		"description":"movie about your next door neighbor",
   		"filePath":"media/mr_brooks-tlra_h480p.mov",
   		"imageUrl":"https://www.movieposter.com/posters/archive/main/95/MPW-47743.jpg",
@@ -23,6 +25,7 @@
   		},
         {
       "name": "Toy Story",
+      "searchName": "Toy Story",
       "description":"movie about toys with weird lives",
       "filePath":"media/toystory3ddoublefeature_h480p.mov",
       "imageUrl":"http://www.impawards.com/1995/posters/toy_story_ver1.jpg",
@@ -33,6 +36,7 @@
       },
         {
       "name": "Toy Story 2",
+      "searchName": "Toy Story 2",
       "description":"sequel movie about toys with weird lives",
       "filePath":"media/toystory3ddoublefeature_h480p.mov",
       "imageUrl":"http://www.impawards.com/1999/posters/toy_story_two.jpg",
@@ -43,6 +47,7 @@
       },
         {
       "name": "Toy Story 3",
+      "searchName": "Toy Story 3",
       "description":"trequel about toys with weird lives",
       "filePath":"media/toystory3-tlr1_h480p.mov",
       "imageUrl":"http://pop-break.com/wp-content/uploads/2015/06/toy-story-3-theatrical-poster.jpg",
@@ -53,6 +58,7 @@
       },
         {
       "name": "Star Wars: The Force Awakens",
+      "searchName": "The Force Awakens",
       "description":"movie about an angsty religious kid",
       "filePath":"media/swepvii-tlr2_h480p.mov",
       "imageUrl":"http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/11/FinnTFA.jpg",
@@ -63,6 +69,7 @@
       },
         {
       "name": "Star Wars: The Phantom Menace",
+      "searchName": "The Phantom Menace",
       "description":"movie about a kid that takes on an entire army",
       "filePath":"media/swepisode1-tlr1_h480p.mov",
       "imageUrl":"http://www.movieartarena.com/imgs/episode1f.jpg",
@@ -73,6 +80,7 @@
       },
         {
       "name": "Into the Wild",
+      "searchName": "Into the Wild",
       "description":"movie about a kid trying to be eaten by bears",
       "filePath":"media/into_the_wild_h640w.mov",
       "imageUrl":"http://www.impawards.com/2007/posters/into_the_wild.jpg",
@@ -83,6 +91,7 @@
       },
         {
       "name": "Jason Bourne",
+      "searchName": "Jason Bourne",
       "description":"movie about a guy that fights a whole bunch of other guys",
       "filePath":"media/jasonbourne-tlr1_h480p.mov",
       "imageUrl":"https://cinemabravo.files.wordpress.com/2016/02/jasonbourne-poster1.jpg",
@@ -93,6 +102,7 @@
       },
         {
       "name": "Finding Dory",
+      "searchName": "Finding Dory",
       "description":"movie about a fish with the memory span of a fish",
       "filePath":"media/findingdory-tlr2_h480p.mov",
       "imageUrl":"http://www.impawards.com/2016/posters/finding_dory_ver8.jpg",
@@ -103,6 +113,7 @@
       },
         {
       "name": "Suicide Squad",
+      "searchName": "Suicide Squad",
       "description":"movie about why you leave the door open in prison",
       "filePath":"media/suicide-squad-harley-quinn-clp2_h480p.mov",
       "imageUrl":"http://www.comingsoon.net/assets/uploads/gallery/suicide-squad/12489243_1674589672821667_4430624289856009994_o.jpg",

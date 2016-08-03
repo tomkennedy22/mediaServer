@@ -67,10 +67,15 @@ function getJSONFromLink(link) {
 
 	    $.each(data['Media'], function(){
 	    	var imdbLink = 'http://www.omdbapi.com/?t=';
-	    	var name = this['name'];
+	    	var name = this['searchName'];
 	    	name = name.replace(/ /g, '+');
 	    	imdbLink += name;
-	    	alert(imdbLink);
+	    	//alert(imdbLink);
+
+	    	$.getJSON(imdbLink , function( data ){
+	    		console.log(imdbLink);
+	    		console.log(data);
+	    	});
 	    })
 });
 }
