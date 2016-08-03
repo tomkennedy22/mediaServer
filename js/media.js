@@ -149,6 +149,7 @@ function populateMedia(data){
 				$('#videoModal').modal('show');
 				//$('#htmlVideo').find('source').attr('src', src);
 				$('#htmlVideo').attr('src', src);
+				$('.modalTitle').text(node['name']);
 
 		    	var imdbLink = 'http://www.omdbapi.com/?t=';
 		    	var name = node['searchName'];
