@@ -4,7 +4,7 @@ console.log('in media.js');
 var write_url = "web/write.php";
 var globalData = {};
 
-Array.prototype.inArray = function(arr, node) { 
+Array.prototype.inArray = function(node) { 
     $.each(arr, function(){
     	if (this === node){
     		return true;
@@ -42,10 +42,10 @@ function createFilters(data) {
 	var genreArray = [];
 
 	$.each(data, function(){
-		if (!yearArray.inArray(this['year'])){
+		if (!inArray(yearArray, this['year'])){
 			yearArray.push(this['year']);
 		}
-		if (!genreArray.inArray(this['genre'])){
+		if (!inArray(genreArray, this['genre'])){
 			genreArray.push(this['genre']);
 		}
 	});
