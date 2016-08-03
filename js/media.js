@@ -118,7 +118,7 @@ function filterMedia(){
 
 		//genre
 		returnedData = $.grep(returnedData, function (element, index) {
-	    	return element['genre'] == filters['genre'] || filters['genre'] === 'Genre';
+	    	return element['genre'] == filters['genre'] || filters['genre'] === 'Genre' || filters['genre'] === '';
 		});
 
 		//years
