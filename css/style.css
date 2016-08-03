@@ -17,4 +17,9 @@ h4.name {
 
 #filterDiv{
 	float: left;
+	width: 20%;
+}
+
+#filterDiv > div {
+	margin-left: 20px;
 }
