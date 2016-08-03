@@ -159,6 +159,12 @@ function populateMedia(data){
 		    	$.getJSON(imdbLink , function( data ){
 		    		console.log(imdbLink);
 		    		console.log(data);
+		    		$('#movieInfo > .runtime').text(data['Runtime']);
+		    		$('#movieInfo > .plot').text(data['Plot']);
+		    		$('#movieInfo > .rated').text('Rated '+ data['Rated']);
+
+		    		if ( data['imbdRating'] != 'N/A')
+		    			{$('#movieInfo > .rating').text(data['imbdRating']);}
 		    	});
 	    	});
 	    //	console.log(html);
