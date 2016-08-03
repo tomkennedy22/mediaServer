@@ -163,11 +163,13 @@ function populateMedia(data){
 		    		$('#movieInfo > .plot').text(data['Plot']);
 		    		$('#movieInfo > .rated').text('Rated '+ data['Rated']);
 
-		    		if ( data['imbdRating'] != 'N/A')
-		    			{$('#movieInfo > .rating').text(data['imbdRating']);}
+		    		if ( data['imdbRating'] != 'N/A'){
+		    			$('#movieInfo > .rating').text(data['imdbRating']);
+		    		}
 		    		else {
 		    			$('#movieInfo > .rating').text('');
 		    		}
+		    		
 		    	});
 	    	});
 	    //	console.log(html);
