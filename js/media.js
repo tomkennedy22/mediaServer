@@ -4,6 +4,13 @@ console.log('in media.js');
 var write_url = "web/write.php";
 var globalData = {};
 
+Array.prototype.inArray = function(comparer) { 
+    for(var i=0; i < this.length; i++) { 
+        if(comparer(this[i])) return true; 
+    }
+    return false; 
+}; 
+
 $(document).ready(function(){
 	var filters = [];
 	addListeners();
