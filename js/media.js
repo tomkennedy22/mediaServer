@@ -3,10 +3,37 @@ console.log('in media.js');
 //var root_url = "http://localhost:8888/hmpg/web/api/index.php/";
 var write_url = "web/write.php";
 var globalData = {};
+
+function filterMedia(){
+
+		console.log('in filter media');
+		console.log(globalData);
+		console.log(filters);
+		var returnedData = globalData['Media'];
+
+		//genre
+		returnedData = $.grep(returnedData, function (element, index) {
+	    	return element['genre'] == filters['genre'] || filters['genre'] === 'Genre';
+		});
+
+		//years
+		returnedData = $.grep(returnedData, function (element, index) {
+	    	return element['year'] >= filters['minYear'] && element['year'] <= filters['maxYear'];
+		});
+
+	    console.log(returnedData);
+	    populateMedia(returnedData);
+}
+
 var filters = {'genre':'',
 			   'minYear':'',
 			   'maxYear':''
 			  }
+
+Object.observe(filters, function(){
+	alert('changes filters');
+	console.log(filters);
+})
 
 function inArray (arr, node) { 
     $.each(arr, function(){
@@ -110,28 +137,6 @@ function createFilters(data) {
 }
 
 
-
-function filterMedia(){
-
-		console.log('in filter media');
-		console.log(globalData);
-		console.log(filters);
-		var returnedData = globalData['Media'];
-
-		//genre
-		returnedData = $.grep(returnedData, function (element, index) {
-	    	return element['genre'] == filters['genre'] || filters['genre'] === 'Genre';
-		});
-
-		//years
-		returnedData = $.grep(returnedData, function (element, index) {
-	    	return element['year'] >= filters['minYear'] && element['year'] <= filters['maxYear'];
-		});
-
-	    console.log(returnedData);
-	    populateMedia(returnedData);
-}
-
 function populateMedia(data){
 
 	$('ul.media').empty();
@@ -210,7 +215,7 @@ function addSlider(minYear, maxYear) {
 
 
     $( "#slider-range" ).on( "slidechange", function( event, ui ) {
-    	var values = $( "#slider-range" ).slider( "values" ));
+    	var values = $( "#slider-range" ).slider( "values" );
     	filters['minYear'] = values[0];
     	filters['maxYear'] = values[1];
     } );
