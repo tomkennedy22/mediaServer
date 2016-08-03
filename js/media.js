@@ -140,7 +140,7 @@ function populateMedia(data){
 	    	$(html).removeAttr('id');
 	    	$(html).find('a > .name').html(this['name']);
 	    	$(html).find('a > .poster').attr('src', this['imageUrl']);
-	    	$(html).find('a').removeAttr('style');
+	    	$(html).removeAttr('style');
 	    	$(html).find('a').attr('data-src', this['filePath']);
 	    	$(html).find('a').on('click', function(){
 	    		var src = $(this).attr('data-src');
