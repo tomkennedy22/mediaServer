@@ -141,7 +141,8 @@ function addListeners(){
 	$('#genreSelect > li > a').on('click', function(){
 		var option = $(this).text();
 		if (option === 'Genre'){
-			filterMedia([]);}
+			populateMedia(globalData);
+				return;}
 		console.log('filtering on ');
 		filterMedia([['genre', option]]);
 	});
