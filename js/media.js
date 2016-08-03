@@ -1,8 +1,8 @@
 console.log('in media.js');
 
 //var root_url = "http://localhost:8888/hmpg/web/api/index.php/";
-//var write_url = "web/api/write.php";
-/*
+var write_url = "web/write.php";
+
 function saveData(){
 	console.log('Saving data!!!');
 	console.log(globalData);
@@ -18,12 +18,14 @@ function saveData(){
 	        failure: function() {alert("Error!");}
 	});
 }
-*/
+
 $(document).ready(function(){
 	var globalData = {};
 	var filters = [];
 	addListeners();
 	getJSONFromLink("web/info.json");
+
+	saveData();
 
 	});
 
