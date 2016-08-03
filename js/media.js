@@ -4,7 +4,7 @@ console.log('in media.js');
 var write_url = "web/write.php";
 var globalData = {};
 
-Array.prototype.inArray = function(node) { 
+function inArray (arr, node) { 
     $.each(arr, function(){
     	if (this === node){
     		return true;
