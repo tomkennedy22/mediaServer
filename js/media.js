@@ -130,7 +130,7 @@ function filterMedia(){
 
 		//rating
 		returnedData = $.grep(returnedData, function (element, index) {
-	    	return element['rating'] >= filters['minRating'] && element['year'] <= filters['maxRating'];
+	    	return element['rating'] >= filters['minRating'] && element['rating'] <= filters['maxRating'];
 		});
 
 	    console.log(returnedData);
