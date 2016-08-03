@@ -46,7 +46,6 @@ $(document).ready(function(){
 	var filters = [];
 	addListeners();
 	getJSONFromLink("web/info.json");
-	addSlider();
 	saveData();
 
 	});
@@ -106,6 +105,7 @@ function createFilters(data) {
 
 	filters['minYear'] = Array.min(yearArray);
 	filters['maxYear'] = Array.max(yearArray);
+	addSlider();
 	console.log(filters);
 }
 
@@ -194,12 +194,12 @@ function saveData(){
 }
 
 
-function addSlider() {
+function addSlider(minYear, maxYear) {
 	console.log('in slider');
     $( "#slider-range" ).slider({
       range: true,
-      min: 1990,
-      max: 2016,
+      min: minYear,
+      max: maxYear,
       values: [ 1994, 2016 ],
       slide: function( event, ui ) {
         $( "#amount" ).val(  ui.values[ 0 ] + " - " + ui.values[ 1 ] );
@@ -210,7 +210,7 @@ function addSlider() {
 
 
     $( "#slider-range" ).on( "slidechange", function( event, ui ) {
-
+    	alert($( "#slider-range" ).slider( "values" ));
     } );
  }
 /*
