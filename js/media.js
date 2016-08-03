@@ -64,19 +64,6 @@ function getJSONFromLink(link) {
 	    createFilters(data['Media']);
 
 	    populateMedia(data['Media']);
-
-	    $.each(data['Media'], function(){
-	    	var imdbLink = 'http://www.omdbapi.com/?t=';
-	    	var name = this['searchName'];
-	    	name = name.replace(/ /g, '+');
-	    	imdbLink += name;
-	    	//alert(imdbLink);
-
-	    	$.getJSON(imdbLink , function( data ){
-	    		console.log(imdbLink);
-	    		console.log(data);
-	    	});
-	    })
 });
 }
 
@@ -147,6 +134,7 @@ function populateMedia(data){
 
 	$('ul.media').empty();
 	    $.each(data, function(){
+	    	var node = this;
 	    	console.log(this);
 	    	var html = $('#movieClone').clone();
 	    	console.log($(html).find('a').attr('class'));
@@ -161,6 +149,18 @@ function populateMedia(data){
 				$('#videoModal').modal('show');
 				//$('#htmlVideo').find('source').attr('src', src);
 				$('#htmlVideo').attr('src', src);
+
+		    	var imdbLink = 'http://www.omdbapi.com/?t=';
+		    	var name = node['searchName'];
+		    	name = name.replace(/ /g, '+');
+		    	imdbLink += name;
+		    	alert(imdbLink);
+
+		    	$.getJSON(imdbLink , function( data ){
+		    		console.log(imdbLink);
+		    		console.log(data);
+		    	});
+	    })
 	    	});
 	    //	console.log(html);
 	    //	console.log($('ul.media'));

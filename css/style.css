@@ -5,7 +5,7 @@ ul.media li {
 }
 
 #movieInfo > li {
-    width: 200px;
+    width: 40%;
     display: inline-block;
     vertical-align: top;
 }
