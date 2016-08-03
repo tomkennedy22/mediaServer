@@ -34,7 +34,7 @@ $(document).ready(function(){
 	var filters = [];
 	addListeners();
 	getJSONFromLink("web/info.json");
-
+	addSlider();
 	saveData();
 
 	});
@@ -174,7 +174,7 @@ function saveData(){
 }
 
 
-$( function() {
+function addSlider() {
 	console.log('in slider');
     $( "#slider-range" ).slider({
       range: true,
@@ -187,7 +187,7 @@ $( function() {
     });
     $( "#amount" ).val(  $( "#slider-range" ).slider( "values", 0 ) +
       " -" + $( "#slider-range" ).slider( "values", 1 ) );
-  } );
+ }
 /*
 
 <li>
