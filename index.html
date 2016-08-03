@@ -60,10 +60,18 @@
         <h4 class="modal-title"></h4>
       </div>
       <div class="modal-body">
-        <video width="80%" style="margin-left:10%" controls id="htmlVideo">
-          <source src="" type="video/mov">
-          Your browser does not support HTML5 video.
-        </video>
+        <div width="80%" style="margin-left:10%">
+          <video  controls id="htmlVideo">
+            <source src="" type="video/mov">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+        <div id="movieInfo">
+          <li class="runtime">runtime</li>
+          <li class="rating">rating</li>
+          <li class="plot">plot</li>
+          <li class="rated">rated</li>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

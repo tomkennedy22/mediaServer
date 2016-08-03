@@ -4,6 +4,13 @@ ul.media li {
     vertical-align: top;
 }
 
+#movieInfo > li {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
 img.poster {
 	height: 150px;
 }
