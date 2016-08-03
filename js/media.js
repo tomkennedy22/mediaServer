@@ -64,6 +64,14 @@ function getJSONFromLink(link) {
 	    createFilters(data['Media']);
 
 	    populateMedia(data['Media']);
+
+	    $.each(data['Media'], function(){
+	    	var imdbLink = 'http://www.omdbapi.com/?t=';
+	    	var name = this['name'];
+	    	name = name.replace(' ', '+');
+	    	imdbLink += name;
+	    	alert(imdbLink);
+	    })
 });
 }
 
@@ -118,7 +126,7 @@ function filterMedia(){
 
 		//genre
 		returnedData = $.grep(returnedData, function (element, index) {
-	    	return element['genre'] == filters['genre'] || filters['genre'] === 'Genre' || filters['genre'] === '';
+	    	return element['genre'] == filters['genre'] || filters['genre'] === 'All' || filters['genre'] === '';
 		});
 
 		//years

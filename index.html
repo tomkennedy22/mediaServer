@@ -16,28 +16,6 @@
     <script src="js/media.js"></script>
 </head>
 
-<!--
-<ul class="nav nav-tabs">
-  Tom's Media Server
-  <li role="presentation" class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-        Genre <span class="caret"></span>
-      </a>
-      <ul id="genreSelect" class="dropdown-menu">
-                  <li value="Genre" class="proto"><a>Genre</a></li>
-      </ul>
-    </li>
-    <li role="presentation">
-      <p>
-        <label for="amount">Movie Release Year:</label>
-        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-      </p>
-       
-      <div id="slider-range"></div>
-  </li>
-</ul>
--->
-
 <div id="filterDiv" style="float:left;">
 
     Tom's Media Server
@@ -46,7 +24,7 @@
           Genre <span class="caret"></span>
         </a>
         <ul id="genreSelect" class="dropdown-menu">
-                    <li value="Genre" class="proto"><a>Genre</a></li>
+                    <li value="Genre" class="proto"><a>All</a></li>
         </ul>
       </div>
       <div role="presentation">
@@ -57,12 +35,19 @@
          
         <div id="slider-range"></div>
     </div>
-
+    <div role="presentation">
+        <p>
+          <label for="amount">Movie Rating:</label>
+          <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        </p>
+         
+        <div id="slider-range"></div>
+    </div>
 </div>
 
 <div>
-    <ul class="media"><!-- more list items -->
-</ul>
+  <ul class="media"><!-- more list items -->
+  </ul>
 </div>
 
 </body>
