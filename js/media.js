@@ -77,6 +77,15 @@ function createFilters(data) {
 		$(clone).attr('value', this).removeAttr('class');
 		$(clone).find('a').text(this);
 		$('#genreSelect').append(clone);
+
+		$(clone).find('a').on('click', function(){
+			var option = $(this).text();
+			if (option === 'Genre'){
+				filterMedia([]);
+				return;}
+			console.log('filtering on ');
+			filterMedia([['genre', option]]);
+		});
 	});
 }
 
