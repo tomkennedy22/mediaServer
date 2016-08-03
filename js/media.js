@@ -7,7 +7,9 @@ var globalData = {};
 
 var filters = {'genre':'',
 			   'minYear':'',
-			   'maxYear':''
+			   'maxYear':'',
+			   'minRating':'',
+			   'maxRating':''
 			  }
 
 function inArray (arr, node) { 
@@ -126,6 +128,11 @@ function filterMedia(){
 	    	return element['year'] >= filters['minYear'] && element['year'] <= filters['maxYear'];
 		});
 
+		//rating
+		returnedData = $.grep(returnedData, function (element, index) {
+	    	return element['rating'] >= filters['minRating'] && element['year'] <= filters['maxRating'];
+		});
+
 	    console.log(returnedData);
 	    populateMedia(returnedData);
 }
@@ -221,7 +228,7 @@ function addSlider(minYear, maxYear) {
       range: true,
       min: minYear,
       max: maxYear,
-      values: [ 1994, 2016 ],
+      values: [ minYear, maxYear ],
       slide: function( event, ui ) {
         $( "#amount" ).val(  ui.values[ 0 ] + " - " + ui.values[ 1 ] );
       }
@@ -236,38 +243,27 @@ function addSlider(minYear, maxYear) {
     	filters['maxYear'] = values[1];
     	filterMedia();
     } );
+
+//////////////////////////////////
+    $( "#rating-slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 5,
+      step: .5,
+      values: [ 0, 5 ],
+      slide: function( event, ui ) {
+        $( "#ratingSlider" ).val(  ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+      }
+    });
+    $( "#ratingSlider" ).val(  $( "#rating-slider-range" ).slider( "values", 0 ) +
+      " -" + $( "#rating-slider-range" ).slider( "values", 1 ) );
+
+
+    $( "#rating-slider-range" ).on( "slidechange", function( event, ui ) {
+    	var values = $( "#rating-slider-range" ).slider( "values" );
+    	filters['minRating'] = values[0];
+    	filters['maxRating'] = values[1];
+    	filterMedia();
+    } );
  }
-/*
 
-<li>
-        <a href="#">
-            <img class= "poster" src = ""/> 
-            <h4 class="name"></h4>
-            <p>Watch now</p>
-        </a>
-    </li>
-*/
-
-//getJSONFromLink("http://162.243.139.175/mediaServer/web/info.json");
-
-/*
-function updateLocalStorage(userId){
-	var accts = globalData.Account;
-
-	console.log('looking for userid ' + userId);
-
-	var user = $.grep(
-	                accts, 
-	                function (item,index) { 
-	                	console.log(item);
-	                    return item.userId == userId; 
-	                });
-
-	console.log(user);
-		//alert('email matched password!');
-	$.each(user[0], function(key, value){
-		localStorage.setItem(key, value);
-	});
-	window.location = 'hmpg.html';
-	
-}*/

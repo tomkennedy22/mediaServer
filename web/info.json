@@ -8,7 +8,7 @@
   		"filePath":"no file path",
   		"imageUrl":"http://www.impawards.com/1995/posters/seven_ver1.jpg",
   		"views":0,
-      "rating":0,
+      "rating":3.5,
   		"genre":"Scary",
       "year":2001
   		},
@@ -19,7 +19,7 @@
   		"filePath":"media/mr_brooks-tlra_h480p.mov",
   		"imageUrl":"https://www.movieposter.com/posters/archive/main/95/MPW-47743.jpg",
   		"views":0,
-      "rating":0,
+      "rating":4.5,
   		"genre":"Drama",
       "year":2007
   		},
@@ -30,7 +30,7 @@
       "filePath":"media/toystory3ddoublefeature_h480p.mov",
       "imageUrl":"http://www.impawards.com/1995/posters/toy_story_ver1.jpg",
       "views":0,
-      "rating":0,
+      "rating":4,
       "genre":"Kids",
       "year":1995
       },
@@ -41,7 +41,7 @@
       "filePath":"media/toystory3ddoublefeature_h480p.mov",
       "imageUrl":"http://www.impawards.com/1999/posters/toy_story_two.jpg",
       "views":0,
-      "rating":0,
+      "rating":3.5,
       "genre":"Kids",
       "year":1999
       },
@@ -52,7 +52,7 @@
       "filePath":"media/toystory3-tlr1_h480p.mov",
       "imageUrl":"http://pop-break.com/wp-content/uploads/2015/06/toy-story-3-theatrical-poster.jpg",
       "views":0,
-      "rating":0,
+      "rating":3.5,
       "genre":"Kids",
       "year":2010
       },
@@ -63,7 +63,7 @@
       "filePath":"media/swepvii-tlr2_h480p.mov",
       "imageUrl":"http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/11/FinnTFA.jpg",
       "views":0,
-      "rating":0,
+      "rating":3.5,
       "genre":"Space Opera",
       "year":2015
       },
@@ -74,7 +74,7 @@
       "filePath":"media/swepisode1-tlr1_h480p.mov",
       "imageUrl":"http://www.movieartarena.com/imgs/episode1f.jpg",
       "views":0,
-      "rating":0,
+      "rating":1.5,
       "genre":"Space Opera",
       "year":1999
       },
@@ -85,7 +85,7 @@
       "filePath":"media/into_the_wild_h640w.mov",
       "imageUrl":"http://www.impawards.com/2007/posters/into_the_wild.jpg",
       "views":0,
-      "rating":0,
+      "rating":3.5,
       "genre":"Drama",
       "year":2007
       },
@@ -96,7 +96,7 @@
       "filePath":"media/jasonbourne-tlr1_h480p.mov",
       "imageUrl":"https://cinemabravo.files.wordpress.com/2016/02/jasonbourne-poster1.jpg",
       "views":0,
-      "rating":0,
+      "rating":3.5,
       "genre":"Action",
       "year":2016
       },
@@ -107,7 +107,7 @@
       "filePath":"media/findingdory-tlr2_h480p.mov",
       "imageUrl":"http://www.impawards.com/2016/posters/finding_dory_ver8.jpg",
       "views":0,
-      "rating":0,
+      "rating":3.5,
       "genre":"Kids",
       "year":2016
       },
@@ -118,7 +118,7 @@
       "filePath":"media/suicide-squad-harley-quinn-clp2_h480p.mov",
       "imageUrl":"http://www.comingsoon.net/assets/uploads/gallery/suicide-squad/12489243_1674589672821667_4430624289856009994_o.jpg",
       "views":0,
-      "rating":0,
+      "rating":3.5,
       "genre":"Action",
       "year":2016
       }
