@@ -187,6 +187,11 @@ function addSlider() {
     });
     $( "#amount" ).val(  $( "#slider-range" ).slider( "values", 0 ) +
       " -" + $( "#slider-range" ).slider( "values", 1 ) );
+
+
+    $( "#slider-range" ).on( "slidechange", function( event, ui ) {
+    	alert('changed slider!');
+    } );
  }
 /*
 
